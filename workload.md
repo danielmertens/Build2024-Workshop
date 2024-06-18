@@ -1,0 +1,14 @@
+$schema: "1.0"
+name: "devbox-customization"
+tasks:
+  - name: choco
+    parameters:
+      package: vscode
+  - name: choco
+    parameters:
+      package: nodejs
+  - name: git-clone
+    description: Clone this repository into C:\Workspaces
+    parameters:
+      repositoryUrl: https://github.com/danielmertens/Build2024-Workshop.git
+      directory: C:\Workspaces

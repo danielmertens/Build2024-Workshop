@@ -1,0 +1,167 @@
+{
+  "resources": {
+    "shipmanagerapi": {
+      "type": "project.v0",
+      "path": "../AsPirate.ShipsManager/AsPirate.ShipsManager.csproj",
+      "env": {
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EXCEPTION_LOG_ATTRIBUTES": "true",
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EVENT_LOG_ATTRIBUTES": "true",
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_RETRY": "in_memory",
+        "ASPNETCORE_FORWARDEDHEADERS_ENABLED": "true"
+      },
+      "bindings": {
+        "http": {
+          "scheme": "http",
+          "protocol": "tcp",
+          "transport": "http"
+        },
+        "https": {
+          "scheme": "https",
+          "protocol": "tcp",
+          "transport": "http"
+        }
+      }
+    },
+    "pathfinderapi": {
+      "type": "project.v0",
+      "path": "../AsPirate.PathFinderApi/AsPirate.PathFinderApi.csproj",
+      "env": {
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EXCEPTION_LOG_ATTRIBUTES": "true",
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EVENT_LOG_ATTRIBUTES": "true",
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_RETRY": "in_memory",
+        "ASPNETCORE_FORWARDEDHEADERS_ENABLED": "true"
+      },
+      "bindings": {
+        "http": {
+          "scheme": "http",
+          "protocol": "tcp",
+          "transport": "http"
+        },
+        "https": {
+          "scheme": "https",
+          "protocol": "tcp",
+          "transport": "http"
+        }
+      }
+    },
+    "bff": {
+      "type": "project.v0",
+      "path": "../AsPirate.Bff/AsPirate.Bff.csproj",
+      "env": {
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EXCEPTION_LOG_ATTRIBUTES": "true",
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EVENT_LOG_ATTRIBUTES": "true",
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_RETRY": "in_memory",
+        "ASPNETCORE_FORWARDEDHEADERS_ENABLED": "true",
+        "services__shipmanagerapi__http__0": "{shipmanagerapi.bindings.http.url}",
+        "services__shipmanagerapi__https__0": "{shipmanagerapi.bindings.https.url}",
+        "services__pathfinderapi__http__0": "{pathfinderapi.bindings.http.url}",
+        "services__pathfinderapi__https__0": "{pathfinderapi.bindings.https.url}"
+      },
+      "bindings": {
+        "http": {
+          "scheme": "http",
+          "protocol": "tcp",
+          "transport": "http",
+          "external": true
+        },
+        "https": {
+          "scheme": "https",
+          "protocol": "tcp",
+          "transport": "http",
+          "external": true
+        }
+      }
+    },
+    "aspirate-shiptransmitter-1": {
+      "type": "project.v0",
+      "path": "../AsPirate.ShipTransmitter/AsPirate.ShipTransmitter.csproj",
+      "env": {
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EXCEPTION_LOG_ATTRIBUTES": "true",
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EVENT_LOG_ATTRIBUTES": "true",
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_RETRY": "in_memory",
+        "services__shipmanagerapi__http__0": "{shipmanagerapi.bindings.http.url}",
+        "services__shipmanagerapi__https__0": "{shipmanagerapi.bindings.https.url}",
+        "services__pathfinderapi__http__0": "{pathfinderapi.bindings.http.url}",
+        "services__pathfinderapi__https__0": "{pathfinderapi.bindings.https.url}",
+        "ShipId": "1"
+      }
+    },
+    "aspirate-shiptransmitter-2": {
+      "type": "project.v0",
+      "path": "../AsPirate.ShipTransmitter/AsPirate.ShipTransmitter.csproj",
+      "env": {
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EXCEPTION_LOG_ATTRIBUTES": "true",
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EVENT_LOG_ATTRIBUTES": "true",
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_RETRY": "in_memory",
+        "services__shipmanagerapi__http__0": "{shipmanagerapi.bindings.http.url}",
+        "services__shipmanagerapi__https__0": "{shipmanagerapi.bindings.https.url}",
+        "services__pathfinderapi__http__0": "{pathfinderapi.bindings.http.url}",
+        "services__pathfinderapi__https__0": "{pathfinderapi.bindings.https.url}",
+        "ShipId": "2"
+      }
+    },
+    "aspirate-shiptransmitter-3": {
+      "type": "project.v0",
+      "path": "../AsPirate.ShipTransmitter/AsPirate.ShipTransmitter.csproj",
+      "env": {
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EXCEPTION_LOG_ATTRIBUTES": "true",
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EVENT_LOG_ATTRIBUTES": "true",
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_RETRY": "in_memory",
+        "services__shipmanagerapi__http__0": "{shipmanagerapi.bindings.http.url}",
+        "services__shipmanagerapi__https__0": "{shipmanagerapi.bindings.https.url}",
+        "services__pathfinderapi__http__0": "{pathfinderapi.bindings.http.url}",
+        "services__pathfinderapi__https__0": "{pathfinderapi.bindings.https.url}",
+        "ShipId": "3"
+      }
+    },
+    "aspirate-shiptransmitter-4": {
+      "type": "project.v0",
+      "path": "../AsPirate.ShipTransmitter/AsPirate.ShipTransmitter.csproj",
+      "env": {
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EXCEPTION_LOG_ATTRIBUTES": "true",
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EVENT_LOG_ATTRIBUTES": "true",
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_RETRY": "in_memory",
+        "services__shipmanagerapi__http__0": "{shipmanagerapi.bindings.http.url}",
+        "services__shipmanagerapi__https__0": "{shipmanagerapi.bindings.https.url}",
+        "services__pathfinderapi__http__0": "{pathfinderapi.bindings.http.url}",
+        "services__pathfinderapi__https__0": "{pathfinderapi.bindings.https.url}",
+        "ShipId": "4"
+      }
+    },
+    "aspirate-shiptransmitter-5": {
+      "type": "project.v0",
+      "path": "../AsPirate.ShipTransmitter/AsPirate.ShipTransmitter.csproj",
+      "env": {
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EXCEPTION_LOG_ATTRIBUTES": "true",
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EVENT_LOG_ATTRIBUTES": "true",
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_RETRY": "in_memory",
+        "services__shipmanagerapi__http__0": "{shipmanagerapi.bindings.http.url}",
+        "services__shipmanagerapi__https__0": "{shipmanagerapi.bindings.https.url}",
+        "services__pathfinderapi__http__0": "{pathfinderapi.bindings.http.url}",
+        "services__pathfinderapi__https__0": "{pathfinderapi.bindings.https.url}",
+        "ShipId": "5"
+      }
+    },
+    "react": {
+      "type": "dockerfile.v0",
+      "path": "../AsPirate.React/Dockerfile",
+      "context": "../AsPirate.React",
+      "env": {
+        "NODE_ENV": "development",
+        "services__bff__http__0": "{bff.bindings.http.url}",
+        "services__bff__https__0": "{bff.bindings.https.url}",
+        "BROWSER": "none",
+        "PORT": "{react.bindings.http.targetPort}"
+      },
+      "bindings": {
+        "http": {
+          "scheme": "http",
+          "protocol": "tcp",
+          "transport": "http",
+          "targetPort": 8000,
+          "external": true
+        }
+      }
+    }
+  }
+}

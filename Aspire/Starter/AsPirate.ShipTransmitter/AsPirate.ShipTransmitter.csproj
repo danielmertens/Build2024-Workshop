@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-AsPirate.ShipTransmitter-b0eb4a95-5139-4ad1-9556-5ab20062de29</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\sea_map_mask.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\sea_map_mask.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.1.4" />
+  </ItemGroup>
+</Project>

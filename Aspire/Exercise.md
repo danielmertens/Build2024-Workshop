@@ -69,6 +69,16 @@ If you run the application again your dashboard should contain the frontend, bff
 
 Once you're done exploring you should have noticed that the frontend is working and you are able to see the console output of each application you started. Unfortunately the structured logging and metrics don't seem to be working yet. We will be fixing this in the next step.
 
+### Extra - Opinionated packages for you
+
+Aspire is an opinionated framework defined by Microsoft. This is not only reflected in how Aspire works but is also related to Aspire specific nuget packages that are available. Each package with the owner "Aspire" is an Aspire package that is open source, propably created by the community and 100% curated by a panel of experts and architects from the Aspire team.
+
+Explore the hosting options by opening the Nuget dependency manager and searching for `owner:Aspire` or select your AppHost project, right-click and go Add -> .NET Aspire Package...
+
+![Menu to find aspire packages](./Images/menu-add-aspire-package.jpg)
+
+When adding dependencies like RabbitMQ of SQLServer Aspire is able to deploy these dependencies itself, either by spinning up a docker image or by connecting to a configured existing instance. This for both the local development as deployment on Azure or other cloud providers.
+
 ## Step 3 - Setting service defaults
 
 To add structured logging, we need to apply open telemetry standard logging to all our services. This can be a lot of work to do right. Luckily Aspire can take care of this for us. The Aspire has even defined a very handy base template to get started with.

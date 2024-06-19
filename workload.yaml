@@ -12,3 +12,8 @@ tasks:
     parameters:
       repositoryUrl: https://github.com/danielmertens/Build2024-Workshop.git
       directory: C:\Workspaces
+  - name: git-clone
+    description: Clone this repository into C:\Workspaces
+    parameters:
+      repositoryUrl: https://github.com/jaspervhaastert/ms-build-2024-redelivery.git
+      directory: C:\Workspaces
